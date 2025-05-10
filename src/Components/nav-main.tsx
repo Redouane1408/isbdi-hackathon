@@ -1,8 +1,8 @@
 import * as React from "react"
+import { useNavigate } from "react-router-dom"
 
 import {
   SidebarGroup,
-  //SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuItem,
@@ -27,10 +27,17 @@ interface NavMainProps {
 }
 
 export function NavMain({ items }: NavMainProps) {
-  // Add state to track which dropdown menus are open
+  const navigate = useNavigate()
   const [openMenus, setOpenMenus] = React.useState<number[]>([])
 
-  // Toggle function to handle opening/closing of dropdown menus
+  const handleClick = (url: string, hasItems: boolean, index: number) => {
+    if (hasItems) {
+      toggleMenu(index)
+    } else {
+      navigate(url)
+    }
+  }
+
   const toggleMenu = (index: number) => {
     setOpenMenus(prev => 
       prev.includes(index) 
@@ -57,7 +64,7 @@ export function NavMain({ items }: NavMainProps) {
                 isActive={item.isActive}
                 className={`text-gray-700 hover:bg-gray-100 ${item.isActive ? 'bg-blue-50 text-blue-600' : ''}`}
                 tooltip={item.title}
-                onClick={() => item.items?.length && toggleMenu(index)}
+                onClick={() => handleClick(item.url, !!item.items?.length, index)}
               >
                 {item.icon && <item.icon className="mr-2" />}
                 <span>{item.title}</span>
@@ -69,6 +76,7 @@ export function NavMain({ items }: NavMainProps) {
                       <SidebarMenuButton 
                         className="text-gray-600 hover:bg-gray-100"
                         tooltip={subItem.title}
+                        onClick={() => navigate(subItem.url)}
                       >
                         {subItem.icon && <subItem.icon className="mr-2" />}
                         <span>{subItem.title}</span>

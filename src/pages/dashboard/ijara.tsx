@@ -68,7 +68,7 @@ const DashboardPage = () => {
                   index === currentStep ? 'border-2 border-blue-500 text-blue-500' : 'border-2 border-gray-300 text-gray-400'}`}
               >
                 {index < currentStep ? (
-                  <PlusCircleIcon className="h-5 w-5" />
+                  <CheckIcon className="h-5 w-5" />
                 ) : index === 0 ? (
                   <CircleIcon className="h-5 w-5" />
                 ) : index === 1 ? (

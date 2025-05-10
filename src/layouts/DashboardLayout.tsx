@@ -14,7 +14,7 @@ const DashboardLayout = ({ children, title = "Ijara" }: DashboardLayoutProps) =>
   };
 
   return (
-    <div className="flex-1 flex bg-background w-full">
+    <div className="flex-1 flex bg-background w-full relative">
       <Sidebar />
       <div className="flex-1 flex flex-col">
         <Header title={title} onNewChat={handleNewChat} />
@@ -22,6 +22,11 @@ const DashboardLayout = ({ children, title = "Ijara" }: DashboardLayoutProps) =>
           {children}
         </main>
       </div>
+      {/* Background image at the bottom */}
+      <div 
+        className="absolute bottom-0 left-0 w-screen h-screen bg-contain bg-no-repeat bg-right-bottom pointer-events-none z-0" 
+        style={{ backgroundImage: "url('/Background.png')" }}
+      ></div>
     </div>
   );
 };

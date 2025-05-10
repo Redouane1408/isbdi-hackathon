@@ -33,36 +33,22 @@ const data = {
   user: {
     name: "Mohamed",
     email: "m@example.com",
-    avatar: "/public/Avatar.svg",
+    avatar: "/public/CircleAvatar.svg",
   },
 
   navMain: [
     {
       title: "Ijara",
-      url: "#",
+      url: "/Ijara",
       icon: CustomLogo.CustomLogo, // Access the specific component
-      isActive: true,
-      items: [
-        {
-          title: "Library",
-          url: "#",
-          icon: BookOpen,
-        },
-
-      ],
+      //isActive: true,
+      
     },
-    {
+    {      
       title: "Reverse Transaction",
-      url: "#",
-      icon: CustomLogo.CustomLogoo, // Access the specific component,
-      items: [
-        {
-          title: "Library",
-          url: "#",
-          icon: BookOpen,
-        },
-
-      ],
+      url: "/reversetransactions",
+      icon: CustomLogo.CustomLogoo,
+      // Remove the items array to prevent dropdown behavior
     },
     {
       title: "Musharaka",
