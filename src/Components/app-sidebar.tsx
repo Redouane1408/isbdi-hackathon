@@ -9,11 +9,13 @@ import {
   Map,
   PieChart,
   Settings2,
+  Clock,
   //SquareTerminal,
 } from "lucide-react"
 
 import { NavMain } from "@/Components/nav-main"
 import { NavProjects } from "@/Components/nav-projects"
+import { NavHistory } from "@/Components/nav-history"
 import { NavUser } from "@/Components/nav-user"
 //import { TeamSwitcher } from "@/Components/team-switcher"
 import {
@@ -24,6 +26,7 @@ import {
   SidebarRail,
 } from "@/Components/ui/sidebar"
 import CustomLogo from "./ui/CustomLogo"
+
 
 // This is sample data.
 const data = {
@@ -37,7 +40,7 @@ const data = {
     {
       title: "Ijara",
       url: "#",
-      icon: CustomLogo,
+      icon: CustomLogo.CustomLogo, // Access the specific component
       isActive: true,
       items: [
         {
@@ -49,9 +52,9 @@ const data = {
       ],
     },
     {
-      title: "Murabaha",
+      title: "Reverse Transaction",
       url: "#",
-      icon: Bot,
+      icon: CustomLogo.CustomLogoo, // Access the specific component,
       items: [
         {
           title: "Library",
@@ -131,6 +134,23 @@ const data = {
       icon: Map,
     },
   ],
+  history: [
+    {
+      name: "Recent Ijara Transaction",
+      url: "#",
+      icon: Clock,
+    },
+    {
+      name: "Previous Musharaka Query",
+      url: "#",
+      icon: Clock,
+    },
+    {
+      name: "Last Week's Analysis",
+      url: "#",
+      icon: Clock,
+    },
+  ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -147,6 +167,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
+        <NavHistory historyItems={data.history} />
       </SidebarContent>
       <SidebarFooter>
         

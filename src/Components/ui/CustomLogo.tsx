@@ -1,4 +1,4 @@
-const CustomLogo = () => (
+export const CustomLogo = () => (
     <img
       src="/public/Avatar.png"
       alt="Custom Logo"
@@ -6,4 +6,13 @@ const CustomLogo = () => (
       height="24"
     />
   )
-  export default CustomLogo;
+  
+export const CustomLogoo = () => (
+    <img
+      src="/public/logoRT.png"
+      alt="Custom Logo"
+      width="24"
+      height="24"
+    />
+  )
+export default { CustomLogo, CustomLogoo };
