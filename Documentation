@@ -1,0 +1,17 @@
+# Application Documentation
+## Overview
+This application is built using React, TypeScript, and Vite. It includes a landing page and a dashboard for managing various functionalities.
+
+## Navigation
+- Landing Page: The landing page is designed to provide an overview of the application's features. However, due to hosting limitations, it is not directly linked to the app's dashboard.
+- Dashboard Access: To access the dashboard, users need to manually enter the URL in their browser. Please use the following steps:
+  1. Open your browser.
+  2. Enter http://localhost:YOUR_PORT/dashboard in the address bar.
+  3. Press Enter to navigate directly to the dashboard.
+## Hosting Limitations
+Currently, the application is not hosted online. Therefore, navigation between the landing page and the dashboard requires manual URL entry as described above.
+
+## Future Improvements
+We plan to integrate seamless navigation between the landing page and the dashboard once the application is hosted online.
+
+Feel free to adjust the content as needed for your documentation.s
