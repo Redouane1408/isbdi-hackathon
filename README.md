@@ -1,4 +1,4 @@
-# Application Documentation- ( Challenge 1 & Challenge 2 )
+# Solution Documentation- ( Prototype )
 
 # Overview
 
